@@ -9,6 +9,10 @@
     <div>{{$meeting->location}}</div>
     <div>{{$meeting->start->format('Y M d @ H:i')}} - {{$meeting->end->format('Y M d @ H:i')}}</div>
 
+    @if ($meeting->displayable)
+      <div>{{ $meeting->agenda }}</div>
+    @endif
+
     <!-- here is where a form allowing users to toggle on/off the public meeting page - you will need to handle that form inside of a controller -->
 
     <h2>RSVPs</h2>

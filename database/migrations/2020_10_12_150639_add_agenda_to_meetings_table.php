@@ -15,7 +15,7 @@ class AddAgendaToMeetingsTable extends Migration
     {
         Schema::table('meetings', function (Blueprint $table) {
           $table->text('agenda');
-          $table->boolean('displayable');
+          $table->boolean('displayable')->default(0);
             //
         });
     }

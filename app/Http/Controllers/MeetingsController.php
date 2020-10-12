@@ -13,10 +13,8 @@ class MeetingsController extends Controller
         return view('meetings.index')->with(['meetings' => $meetings]);
     }
 
-    public function show($meetingId)
+    public function show(Meeting $meeting)
     {
-        $meeting = Meeting::find($meetingId);
-
         return view('meetings.show')->with(['meeting' => $meeting]);
     }
 }
