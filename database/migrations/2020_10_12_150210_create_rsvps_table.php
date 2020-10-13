@@ -16,6 +16,7 @@ class CreateRsvpsTable extends Migration
         Schema::create('rsvps', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
+            $table->text('response');
             $table->unsignedBigInteger('meeting_id');
             $table->unsignedBigInteger('user_id');
 

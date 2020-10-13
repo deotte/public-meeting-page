@@ -17,4 +17,14 @@ class MeetingsController extends Controller
     {
         return view('meetings.show')->with(['meeting' => $meeting]);
     }
+
+    public function public_show(Meeting $meeting)
+    {
+        return view('meetings.public_show')->with(
+          [
+            'meeting' => $meeting,
+            'rsvps' => $meeting->rsvps
+          ]
+        );
+    }
 }
