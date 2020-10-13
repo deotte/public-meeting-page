@@ -13,18 +13,54 @@
       <div>{{ $meeting->agenda }}</div>
     @endif
 
-    <!-- here is where a form allowing users to toggle on/off the public meeting page - you will need to handle that form inside of a controller -->
+    <div class="form-wrapper">
+      <div class="header">
+        <h2>RSVP</h2>
+        <p>Please RSVP by this date to be counted for free food</p>
+      </div>
+      <div class="form">
+        <form method="POST" action="/rsvps">
+          @csrf
 
-    <h2>RSVPs</h2>
+          <div class="field">
+            <label for="email">Your Email</label>
+            <input type="text" name="email" id="email"></input>
+          </div>
+
+          <div class="field">
+            <label for="name">Your Name</label>
+            <input type="text" name="name" id="name"></input>
+          </div>
+
+          <div class="field">
+            <input type="radio" id="response-1" name="response" value="yes">
+            <label for="response-1">Yes</label>
+            
+            <input type="radio" id="response-2" name="response" value="no">
+            <label for="response-2">No</label>
+
+            <input type="radio" id="response-3" name="response" value="maybe">
+            <label for="response-3">Maybe</label>
+          </div>
+
+          <input type="hidden" value="{{$meeting->id}}" name="meeting_id"></input>
+
+          <div class="field">
+            <button type="submit">Submit</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <h2>Current Attendees</h2>
     @forelse ($rsvps as $rsvp)
       <div class="rsvp-wrapper">
         <p>{{ $rsvp->response }}</p>
-        <p>{{ $rsvp->user->email }}</p>
+        <p>{{ $rsvp->email }}</p>
       </div>
     @empty
       <div class="no-rsvps-wrapper">
         <p>No RSVP's yet.</p>
       </div>
     @endforelse
-    <!-- here is where a list of emails with their RSVP status for this meeting will go -->
 @endsection

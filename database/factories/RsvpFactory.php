@@ -4,7 +4,6 @@ namespace Database\Factories;
 
 use App\Models\Rsvp;
 use App\Models\Meeting;
-use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
 use Illuminate\Support\Str;
 
@@ -27,9 +26,10 @@ class RsvpFactory extends Factory
         $options = ['Yes', 'No', 'Maybe'];
 
         return [
+          'email' => $this->faker->email,
           'meeting_id' => Meeting::all()->random()->id,
-          'response' => $this->faker->randomElement($options),
-          'user_id' => User::first()->id
+          'name' => $this->faker->name,
+          'response' => $this->faker->randomElement($options)
         ];
     }
 }

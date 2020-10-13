@@ -16,14 +16,10 @@ class CreateRsvpsTable extends Migration
         Schema::create('rsvps', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
-            $table->text('response');
+            $table->string('response');
+            $table->string('email');
+            $table->string('name');
             $table->unsignedBigInteger('meeting_id');
-            $table->unsignedBigInteger('user_id');
-
-            $table->foreign('user_id')
-              ->references('id')
-              ->on('users')
-              ->onDelete('cascade');
 
             $table->foreign('meeting_id')
               ->references('id')
