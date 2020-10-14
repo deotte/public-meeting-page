@@ -12,6 +12,8 @@ class Meeting extends Model
 
     protected $dates = ['start', 'end'];
 
+    protected $fillable = ['agenda', 'displayable'];
+
     public function rsvps()
     {
       return $this->hasMany(Rsvp::class);

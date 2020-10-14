@@ -20,4 +20,5 @@ Route::get('/', function () {
 Route::get('/meetings', 'App\Http\Controllers\MeetingsController@index')->middleware('auth.basic');
 Route::get('/meetings/{meeting}', 'App\Http\Controllers\MeetingsController@show')->middleware('auth.basic');
 Route::get('/meetings/{meeting}/public', 'App\Http\Controllers\MeetingsController@public_show')->name('meetings.public_show');
+Route::put('/meetings/{meeting}', 'App\Http\Controllers\MeetingsController@update')->middleware('auth.basic');
 Route::post('/rsvps', 'App\Http\Controllers\RsvpsController@store');

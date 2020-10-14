@@ -27,4 +27,15 @@ class MeetingsController extends Controller
           ]
         );
     }
+
+    public function update(Meeting $meeting)
+    {
+        $meeting->update(request()->validate([
+          'agenda' => 'required',
+          'displayable' => 'required',
+        ]));
+
+        return redirect()->route('meetings.public_show', ['meeting' => $meeting->id])
+                         ->withSuccess(['Meeting successfully updated']);
+    }
 }
