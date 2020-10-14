@@ -1,0 +1,141 @@
+@import url(https://fonts.googleapis.com/css2?family=Open+Sans&display=swap);nav {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+nav .nav-header,
+nav .nav-user {
+  position: absolute;
+  display: flex;
+}
+
+nav .nav-header {
+  left: 1rem;
+  top: 0.75rem;
+}
+
+nav .nav-header a {
+  font-size: 1.5rem;
+}
+
+nav .nav-user {
+  right: 1rem;
+  top: 1rem;
+}
+
+.section-header {
+  width: 75%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+
+.section-header h1 {
+  position: absolute;
+  top: 2rem;
+  border-bottom: 1px solid #000000;
+  padding-bottom: 0.5rem;
+}
+
+.meeting-wrapper {
+  width: 75%;
+  height: 150px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+}
+
+.meeting-wrapper .meeting-header {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.meeting-wrapper .meeting-header .meeting-header-title {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.meeting-wrapper .meeting-header .meeting-header-title a {
+  margin: auto;
+}
+
+.meeting-wrapper .meeting-header .meeting-header-time {
+  width: 50%;
+  height: 100%;
+  display: flex;
+}
+
+.meeting-wrapper .meeting-header .meeting-header-time p {
+  margin: auto;
+}
+
+.meeting-wrapper .meeting-content {
+  width: 100%;
+  height: 65%;
+  display: flex;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.meeting-wrapper .meeting-content p {
+  align-self: center;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+section {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin-bottom: 16px;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a,
+input,
+button,
+textarea {
+  font-family: "Open Sans", sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+}
+
+a:hover {
+  color: #d16644;
+}
+

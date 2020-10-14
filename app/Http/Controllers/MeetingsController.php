@@ -3,14 +3,21 @@
 namespace App\Http\Controllers;
 
 use App\Models\Meeting;
+use App\Models\Rsvp;
 
 class MeetingsController extends Controller
 {
     public function index()
     {
-        $meetings = Meeting::all();
+        $meetings = Meeting::take(3)->latest()->get();
+        $user_meetings = Meeting::take(3)->oldest()->get();
 
-        return view('meetings.index')->with(['meetings' => $meetings]);
+        return view('meetings.index')->with(
+          [
+            'meetings' => $meetings,
+            'user_meetings' => $user_meetings
+          ]
+        );
     }
 
     public function show(Meeting $meeting)

@@ -1,0 +1,68 @@
+@import 'variables';
+
+.section-header {
+  width: 75%;
+  height: 100px;
+  padding: 10px;
+  box-sizing: border-box;
+  position: relative;
+  
+  h1 {
+    position: absolute;
+    top: 2rem;
+    border-bottom: 1px solid #000000;
+    padding-bottom: .5rem;
+  }
+}
+
+.meeting-wrapper {
+  width: 75%;
+  height: 150px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  background-color: $light-grey;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
+
+  .meeting-header {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    background-color: $medium-grey;
+
+    .meeting-header-title {
+      width: 50%;
+      height: 100%;
+      display: flex;
+
+      a {
+        margin: auto;
+      }
+    }
+
+    .meeting-header-time {
+      width: 50%;
+      height: 100%;
+      display: flex;
+
+      p {
+        margin: auto;
+      }
+    }
+  }
+
+  .meeting-content {
+    width: 100%;
+    height: 65%;
+    display: flex;
+    padding: 10px;
+    box-sizing: border-box;
+
+    p {
+      align-self: center;
+    }
+  }
+}

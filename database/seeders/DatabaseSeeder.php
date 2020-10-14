@@ -19,7 +19,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         User::factory(1)->create();
-        Meeting::factory(10)->create();
+        Meeting::factory(6)->create();
         Rsvp::factory(4)->create();
     }
 }
