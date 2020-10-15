@@ -1,19 +1,31 @@
 @extends('layouts.app')
 
 @section('content')
-    <a href="/meetings">&lt; Back</a>
+  <section class="public-show-section">
+    <!-- <a href="/meetings">&lt; Back</a> -->
+    <div class="public-meeting">
+      <div class="public-heading">
+        @auth
+          <a href="/meetings/{{$meeting->id}}">{{ $meeting->title }}</a>
+        @endauth
 
-    <h1>{{$meeting->title}}</h1>
+        @guest
+          <h1>{{ $meeting->title }}</h1>
+        @endguest
+      </div>
+      <div class="public-location-time">
+        <p>{{ $meeting->location }}<p>
+        <p>{{$meeting->start->format('M d @ h:i')}} - {{$meeting->end->format('M d @ h:i')}}</p>
+      </div>
+      <div class="public-description">
+        <p>{{ $meeting->description }}</p>
+      </div>
+      <div class="public-agenda">
+        <p>{{ $meeting->agenda }}</p>
+      </div>
+    </div>
 
-    <div>{{$meeting->description}}</div>
-    <div>{{$meeting->location}}</div>
-    <div>{{$meeting->start->format('Y M d @ H:i')}} - {{$meeting->end->format('Y M d @ H:i')}}</div>
-
-    @if ($meeting->displayable)
-      <div>{{ $meeting->agenda }}</div>
-    @endif
-
-    <div class="form-wrapper">
+    <div class="public-form-wrapper">
       <div class="header">
         <h2>RSVP</h2>
         <p>Please RSVP by this date to be counted for free food</p>
@@ -52,15 +64,20 @@
       </div>
     </div>
 
-    <h2>Current Attendees</h2>
-    @forelse ($rsvps as $rsvp)
-      <div class="rsvp-wrapper">
-        <p>{{ $rsvp->response }}</p>
-        <p>{{ $rsvp->email }}</p>
+    <div class="rsvp-wrapper">
+      <div class="rsvp-header">
+        <h2>Current Attendees</h2>
       </div>
-    @empty
-      <div class="no-rsvps-wrapper">
-        <p>No RSVP's yet.</p>
+      <div class="rsvps">
+        @forelse ($rsvps as $rsvp)
+          <div class="attendees">
+            <p>{{ $rsvp->email }}</p>
+            <p>{{ $rsvp->response }}</p>
+          </div>
+        @empty
+          <p>No RSVP's yet.</p>
+        @endforelse
       </div>
-    @endforelse
+    </div>
+  </section>
 @endsection

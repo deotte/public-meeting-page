@@ -1,5 +1,6 @@
 @import 'nav';
 @import 'meetings';
+@import 'public-show';
 
 * {
     margin:0;
@@ -13,14 +14,13 @@ html, body {
 section {
     min-height:100%;
     width:100%;
-    display:flex;
 }
 
 h1, h2, h3, h4, h5, h6, p {
     margin-bottom: 16px;
 }
 
-h1, h2, h3, p, li, a, input, button, textarea {
+h1, h2, h3, p, li, a, input, button, textarea, label {
     font-family: 'Open Sans', sans-serif;
 }
 

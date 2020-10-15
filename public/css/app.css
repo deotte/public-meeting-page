@@ -92,6 +92,178 @@ nav .nav-user {
   align-self: center;
 }
 
+.public-meeting {
+  width: 700px;
+  height: 500px;
+  background-color: rgba(0, 0, 0, 0.05);
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.public-meeting .public-heading {
+  display: flex;
+  height: 15%;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.public-meeting p,
+.public-meeting a,
+.public-meeting h1 {
+  margin: auto;
+  text-align: center;
+}
+
+.public-meeting a {
+  font-size: 1.5rem;
+}
+
+.public-meeting .public-location-time {
+  display: flex;
+  width: 100%;
+  height: 20%;
+}
+
+.public-meeting .public-description {
+  display: flex;
+  height: 25%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.public-meeting .public-agenda {
+  display: flex;
+  height: 40%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.public-form-wrapper {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+}
+
+.public-form-wrapper .header {
+  width: 100%;
+  height: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.public-form-wrapper .header p {
+  opacity: 75%;
+}
+
+.public-form-wrapper .header h2,
+.public-form-wrapper .header p {
+  margin-top: 0.75rem;
+  text-align: center;
+}
+
+.public-form-wrapper .form {
+  width: 50%;
+  height: 65%;
+  display: flex;
+  margin: auto;
+}
+
+.public-form-wrapper .form form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+}
+
+.public-form-wrapper .form form .field {
+  width: 100%;
+  height: 25%;
+  display: flex;
+}
+
+.public-form-wrapper .form form .field input,
+.public-form-wrapper .form form .field label {
+  margin: auto;
+}
+
+.public-form-wrapper .form form .field input {
+  width: 65%;
+  background-color: rgba(0, 0, 0, 0.05);
+  border: none;
+}
+
+.public-form-wrapper .form form .field input[type=text] {
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+
+.public-form-wrapper .form form .field label {
+  width: 35%;
+}
+
+.public-form-wrapper .form form .field button {
+  margin: auto;
+  margin-top: 1rem;
+  padding: 20px;
+  border: none;
+  width: 50%;
+  border-radius: 10px;
+  font-size: 0.75rem;
+}
+
+.public-form-wrapper .form form .field button:hover {
+  cursor: pointer;
+  background-color: #d16644;
+  color: #FFFFFF;
+}
+
+.rsvp-wrapper {
+  width: 1200px;
+  min-height: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+}
+
+.rsvp-wrapper .rsvp-header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.rsvp-wrapper .rsvp-header h2 {
+  margin: auto;
+}
+
+.rsvp-wrapper .rsvps {
+  width: 100%;
+  min-height: 150px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.rsvp-wrapper .rsvps .attendees {
+  width: 150px;
+  height: 75px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.rsvp-wrapper .rsvps .attendees p {
+  margin: auto;
+  font-size: 0.75rem;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -105,7 +277,6 @@ body {
 section {
   min-height: 100%;
   width: 100%;
-  display: flex;
 }
 
 h1,
@@ -126,7 +297,8 @@ li,
 a,
 input,
 button,
-textarea {
+textarea,
+label {
   font-family: "Open Sans", sans-serif;
 }
 

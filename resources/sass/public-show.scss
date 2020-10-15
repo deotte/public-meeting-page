@@ -1,0 +1,169 @@
+.public-meeting {
+  width: 700px;
+  height: 500px;
+  background-color: $light-grey;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+  .public-heading {
+    display: flex;
+    height: 15%;
+    background-color: $medium-grey;
+  }
+
+  p, a, h1 {
+      margin: auto;
+      text-align: center;
+  }
+
+  a {
+    font-size: 1.5rem;
+  }
+
+  .public-location-time {
+    display: flex;
+    width: 100%;
+    height: 20%;
+  }
+
+  .public-description {
+    display: flex;
+    height: 25%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+  .public-agenda {
+    display: flex;
+    height: 40%;
+    padding: 10px;
+    box-sizing: border-box;
+  }
+
+}
+
+.public-form-wrapper {
+  width: 700px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 2rem;
+
+
+  .header {
+    width: 100%;
+    height: 35%;
+    display: flex;
+    flex-direction: column;
+
+    p {
+      opacity: 75%;
+    }
+
+    h2, p {
+      margin-top: .75rem;
+      text-align: center;
+    }
+  }
+
+  .form {
+    width: 50%;
+    height: 65%;
+    display: flex;
+    margin: auto;
+
+    form {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      margin: auto;
+
+      .field {
+        width: 100%;
+        height: 25%;
+        display: flex;
+
+        input, label {
+          margin: auto;
+        }
+
+        input {
+          width: 65%;
+          background-color: $light-grey;
+          border: none;
+        }
+
+        input[type=text] {
+          padding: 10px;
+          box-sizing: border-box;
+          font-size: 1rem;
+        }
+
+        label {
+          width: 35%;
+        }
+
+        button {
+          margin: auto;
+          margin-top: 1rem;
+          padding: 20px;
+          border: none;
+          width: 50%;
+          border-radius: 10px;
+          font-size: .75rem;
+
+          &:hover {
+            cursor: pointer;
+            background-color: #d16644;
+            color: #FFFFFF;
+          }
+        }
+      }
+    }
+  }
+}
+
+.rsvp-wrapper {
+  width: 1200px;
+  min-height: 200px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  margin-top: 4rem;
+
+  .rsvp-header {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    background-color: $medium-grey;
+
+    h2 {
+      margin: auto;
+    }
+  }
+
+  .rsvps {
+    width: 100%;
+    min-height: 150px;
+    display: flex;
+    flex-wrap: wrap;
+
+    .attendees {
+      width: 150px;
+      height: 75px;
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      background-color: $light-grey;
+
+      p {
+        margin: auto;
+        font-size: .75rem;
+      }
+    }
+  }
+}
